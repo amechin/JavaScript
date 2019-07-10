@@ -1,1 +1,1 @@
-JavaScript
+Exercices pour apprendre le JavaScript
