@@ -43,7 +43,6 @@
         moyenne = somme / (cpt-1);
         document.write("Moyenne : "+ moyenne);
     }
-
 </script>
 
 <!-- Optional JavaScript -->
