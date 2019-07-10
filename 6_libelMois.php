@@ -16,46 +16,50 @@
 
 <script>
     /* Affichage du nom du script */
-    alert("Polynôme du second degré");
+    alert("Impression du libellé du mois");
 
-    /* Initialisation des paramètres */
-    var a;
-    var b;
-    var c;
-    var delta;
+    /* Saisie du numéro de mois */
+    mois = parseInt(prompt("Numéro du mois (1 à 12) :"));
 
-    /* Saisie des paramètres */
-    a = prompt("a :");
-    b = prompt("b :");
-    c = prompt("c :");
-
-    /* Affichage des paramètres */
-    document.write("a = " + a + "<br />");
-    document.write("b = " + b + "<br />");
-    document.write("c = " + c + "<br />");
-    document.write("Discriminant delta : " + delta + "<br />");
-
-    /* Calcul du discriminant */
-    delta = (parseInt(b) * parseInt(b)) - (4 * parseInt(a) * parseInt(c));
-
-    /* Détermination des racines */
-    if (delta < 0)
-    {
-        document.write("Pas de solutions");
-    }
-    else
-    {
-        if (0 == delta)
-        {
-            document.write("Solution unique : " + (-b / (2 * a)));
-        }
-        else
-        {
-            document.write("Solution n°1 : " + (-b +  Math.sqrt(delta)) /
-                (2 * a) + "<br />");
-            document.write("Solution n°2 : " + (-b -  Math.sqrt(delta)) /
-                (2 * a));
-        }
+    /* Affichage du résultat */
+    switch (mois) {
+        case 1:
+            document.write("Mois n° " + mois + " : Janvier");
+            break;
+        case 2:
+            document.write("Mois n° " + mois + " : Février");
+            break;
+        case 3:
+            document.write("Mois n° " + mois + " : Mars");
+            break;
+        case 4:
+            document.write("Mois n° " + mois + " : Avril");
+            break;
+        case 5:
+            document.write("Mois n° " + mois + " : Mai");
+            break;
+        case 6:
+            document.write("Mois n° " + mois + " : Juin");
+            break;
+        case 7:
+            document.write("Mois n° " + mois + " : Juillet");
+            break;
+        case 8:
+            document.write("Mois n° " + mois + " : Août");
+        case 9:
+            document.write("Mois n° " + mois + " : Septembre");
+            break;
+        case 10:
+            document.write("Mois n° " + mois + " : Octobre");
+            break;
+        case 11:
+            document.write("Mois n° " + mois + " : Novembre");
+            break;
+        case 12:
+            document.write("Mois n° " + mois + " : Décembre");
+            break;
+        default:
+            document.write("Erreur de saisie sur le n° de mois");
     }
 </script>
 
