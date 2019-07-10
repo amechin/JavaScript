@@ -16,24 +16,16 @@
 
 <script>
     /* Affichage du nom du script */
-    alert("Surface et volume d’une sphère");
+    alert("Nombre de lettre dans un mot");
 
     /* Déclaration de variables locales */
-    var pi, rayon, surface, volume;
+    var nom;
 
-    /* Initialisation des variables */
-    pi = 3.14;
-    rayon = prompt("Rayon de la sphère :");
+    /* Saisie du nom au clavier */
+    nom = prompt("Nom :");
 
-    /* Calculs */
-    surface = 4 * pi * rayon * rayon;
-    volume = surface * rayon / 3;
-
-    /* Affichage des résultats */
-    document.write("Rayon de la sphère : "
-        + rayon + "<br />");
-    document.write("Surface : " + surface
-        + "<br />Volume : " + volume);
+    /* Affichage du résultat */
+    document.write("Le nom " + nom +" contient " + nom.length +" lettre(s)");
 
 </script>
 
