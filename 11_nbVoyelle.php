@@ -16,24 +16,47 @@
 
 <script>
     /* Affichage du nom du script */
-    alert("Moyenne de 10 nombres - boucle for");
+    alert("Décompte du nombre de voyelles dans un mot");
 
     /* Déclaration de variables locales */
-    var nblu, cpt, somme, moyenne;
+    var mot, nb_voyelles, compteur;
 
-    /* Initialisations */
-    somme = 0.0;
+    /* Saisie du mot */
+    mot = prompt("Mot :");
 
-    /* Boucle de traitement */
-    for (cpt=1; cpt<=10; cpt++)
-    {
-        nblu = parseFloat(prompt("Nombre n°" + cpt));
-        somme = somme + parseFloat(nblu);
+    /* Conversion en majuscules (pour éviter de faire 12 tests) */
+    mot = mot.toUpperCase();
+
+    /* Initialisation des variables */
+    nb_voyelles = 0;
+
+    /* Détermination du nombre de voyelles */
+    for (compteur=0; compteur<=mot.length; compteur++) {
+        switch (mot.charAt(compteur)) {
+            case "A":
+                nb_voyelles = nb_voyelles + 1;
+                break;
+            case "E":
+                nb_voyelles = nb_voyelles + 1;
+                break;
+            case "I":
+                nb_voyelles = nb_voyelles + 1;
+                break;
+            case "O":
+                nb_voyelles = nb_voyelles + 1;
+                break;
+            case "U":
+                nb_voyelles = nb_voyelles + 1;
+                break;
+            case "Y":
+                nb_voyelles = nb_voyelles + 1;
+                break;
+        }
     }
 
     /* Affichage du résultat */
-    moyenne = somme / 10;
-    document.write("Moyenne : "+ moyenne);
+    document.write(mot, " contient " + nb_voyelles + " voyelles");
+
 </script>
 
 <!-- Optional JavaScript -->
@@ -43,3 +66,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
